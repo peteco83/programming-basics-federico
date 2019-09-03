@@ -13,8 +13,11 @@ function rC(clothingColor, lastFoodEaten) {
     clothingColor.substring(1)} ${foodFirstletter.toUpperCase() +
     lastFoodEaten.substring(1)}`);
 
-  return myArray;
+  console.log(myArray);
+
+  return `The ${firstLetter.toUpperCase() +
+    clothingColor.substring(1)} ${foodFirstletter.toUpperCase() +
+    lastFoodEaten.substring(1)}`;
 }
 
 console.log(rC("brown", "beans"));
-
