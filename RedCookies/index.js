@@ -1,23 +1,19 @@
-const myArray = [];
-
-function rC(clothingColor, lastFoodEaten) {
-  //   let capital = clothingColor.toUppercase;
-  let firstLetter = clothingColor.substring(0, 1);
-  //   let capital = firstLetter.toUpperCase();
-  //   let rest = clothingColor.substring(1);
-  let foodFirstletter = lastFoodEaten.substring(0, 1);
-  //   let foodCapital = foodFirstletter.toUpperCase();
-  //   let foodRest = lastFoodEaten.substring(1);
-
-  myArray.push(`The ${firstLetter.toUpperCase() +
-    clothingColor.substring(1)} ${foodFirstletter.toUpperCase() +
-    lastFoodEaten.substring(1)}`);
-
-  console.log(myArray);
-
-  return `The ${firstLetter.toUpperCase() +
-    clothingColor.substring(1)} ${foodFirstletter.toUpperCase() +
-    lastFoodEaten.substring(1)}`;
+function generateBandName(clothingColor, lastFoodEaten) {
+  clothingColor = capitalizeColor(clothingColor);
+  lastFoodEaten = capitalizeFood(lastFoodEaten);
+  return `${clothingColor} ${lastFoodEaten}`;
 }
 
-console.log(rC("brown", "beans"));
+
+function capitalizeColor(clothingColor) {
+  clothingColor = clothingColor[0].toUpperCase() + clothingColor.substring(1).toLowerCase();
+  return clothingColor
+
+}
+
+function capitalizeFood(lastFoodEaten) {
+  lastFoodEaten = lastFoodEaten[0].toUpperCase() + lastFoodEaten.substring(1).toLowerCase();
+  return lastFoodEaten
+}
+
+console.log(generateBandName("black", "PIE"));
