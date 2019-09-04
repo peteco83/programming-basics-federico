@@ -1,8 +1,6 @@
-function generateBandName(clothingColor, lastFoodEaten) {
-  const color = clothingColor[0].toUpperCase() + clothingColor.substring(1).toLowerCase();
-  const food = lastFoodEaten[0].toUpperCase() + lastFoodEaten.substring(1).toLowerCase();
-  return `${color} ${food}`;
+function generateBandName(rawString) {
+  const both = rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
+  return `${both} `;
 }
 
-
-console.log(generateBandName("black", "PIE"));
+console.log(generateBandName("crimson") + generateBandName("KEBAB"));
