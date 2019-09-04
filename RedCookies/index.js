@@ -20,20 +20,20 @@ console.log(generateBandName("brown", "beans"));
 generateBandName("rosa", "spagheTTi")
 console.log(myArray)
 
-// //2.3
-// function generateBandName(rawString) {
-//   const both = rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
-//   return `${both} `;
-// }
+//2.3
+function generateBandName(rawString) {
+  const both = rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
+  return `${both} `;
+}
 
-// console.log(generateBandName("crimson") + generateBandName("KEBAB"));
-
-
-// // 2.4 
+console.log(generateBandName("crimson") + generateBandName("KEBAB"));
 
 
-// function makeTasty(color)
-// let tastyColor = ''
-// switch (color) {
+// 2.4 
 
-// }
+
+function makeTasty(color)
+let tastyColor = ''
+switch (color) {
+
+}
