@@ -2,14 +2,12 @@
 const myArray = [];
 
 function generateBandName(clothingColor, lastFoodEaten) {
-  let bandName = ''
-  let color = clothingColor[0].toUpperCase();
-  color += clothingColor.substring(1).toLowerCase();
+  let bandName = '';
 
-  let food = lastFoodEaten[0].toUpperCase();
-  food += lastFoodEaten.substring(1).toLowerCase()
+  let color = capitalizeColor(clothingColor);
+  let food = capitalizeFood(lastFoodEaten);
 
-  bandName = `The ${color} ${food}`
+  bandName = `The ${color} ${food}`;
 
   myArray.push(bandName);
 
@@ -20,20 +18,32 @@ console.log(generateBandName("brown", "beans"));
 generateBandName("rosa", "spagheTTi")
 console.log(myArray)
 
-//2.3
-function generateBandName(rawString) {
-  const both = rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
-  return `${both} `;
+//2.2
+function capitalizeColor(clothingColor) {
+  return clothingColor[0].toUpperCase() + clothingColor.substring(1).toLowerCase();
+  // const food = lastFoodEaten[0].toUpperCase() + lastFoodEaten.substring(1).toLowerCase();
 }
+console.log(capitalizeColor("black"));
 
-console.log(generateBandName("crimson") + generateBandName("KEBAB"));
-
-
-// 2.4 
-
-
-function makeTasty(color)
-let tastyColor = ''
-switch (color) {
-
+function capitalizeFood(lastFoodEaten) {
+  return lastFoodEaten[0].toUpperCase() + lastFoodEaten.substring(1).toLowerCase();
 }
+console.log(capitalizeFood("beans"))
+
+// //2.3
+// function generateBandName(rawString) {
+//   const both = rawString[0].toUpperCase() + rawString.substring(1).toLowerCase();
+//   return `${both} `;
+// }
+
+// console.log(generateBandName("crimson") + generateBandName("KEBAB"));
+
+
+// // 2.4 
+
+
+// function makeTasty(color)
+// let tastyColor = ''
+// switch (color) {
+
+// }
