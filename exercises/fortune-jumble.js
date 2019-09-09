@@ -20,11 +20,6 @@
 
 console.log(getFortune());
 
-function randomElementPicker(array) {
-  const index = Math.floor(Math.random() * array.length);
-  return array[index];
-}
-
 function getFortune() {
   const jobs = [
     "an assistant teacher",
@@ -50,4 +45,9 @@ function getFortune() {
   const place = randomElementPicker(places);
 
   return `You'll be celebrating 100 000 GitHub stars on your side project, in the heart of ${place} where you've been working as ${job}!`;
+}
+
+function randomElementPicker(array) {
+  const index = Math.floor(Math.random() * array.length);
+  return array[index];
 }
