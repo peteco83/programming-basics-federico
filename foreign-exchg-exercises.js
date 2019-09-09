@@ -72,8 +72,7 @@ function convertFromEur(amount, curr, calculate) {
       result = getChfFromEur(amount);
       break;
     default:
-      result =
-        "The requested currency is not available. Please enter JPY, AUD or CHF";
+      return "The requested currency is not available. Please enter JPY, AUD or CHF";
   }
   return calculate(result);
 }
@@ -100,4 +99,4 @@ const twoDecimals = number => {
   return number.toFixed(2);
 };
 
-console.log(convertFromEur(700, "AUD", twoDecimals));
+console.log(convertFromEur(700, "CAD", twoDecimals));
