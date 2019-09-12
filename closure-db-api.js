@@ -9,6 +9,11 @@ let init = () => {
 
 const createInDb = init();
 
-console.log(createInDb("dog"));
-console.log(createInDb("cat"));
+createInDb();
+createInDb();
+createInDb();
+createInDb();
+createInDb();
+createInDb();
+createInDb();
 console.log(createInDb("horse"));
