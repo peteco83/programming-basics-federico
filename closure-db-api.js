@@ -1,6 +1,6 @@
 const init = () => {
   const db = [];
-
+  const api = [];
   const create = dbToArray => {
     db.push(dbToArray);
     return db.length;
@@ -10,15 +10,30 @@ const init = () => {
     const dbCopy = [...db];
     return dbCopy;
   };
-  const api = [create, read];
+
+  const update = (index, elem) => {
+    if (db[index]) {
+      return (db[index] = elem);
+    } else {
+      //   return "Error, there is no existing element at the given index!";
+      //   return db.push(elem);
+      return create(elem);
+    }
+  };
+
+  api.push(create, read, update);
   return api;
 };
 
-const createInDb = init();
+let createInDb = init();
 
-createInDb[0]("dog");
-createInDb[0]("cat");
-createInDb[0]("horse");
-createInDb[0]("pajaro");
-console.log(createInDb[0]("horse"));
-console.log(createInDb[1]());
+console.log(createInDb[0]("first"));
+console.log(createInDb[0](2));
+console.log(createInDb[0]("sun"));
+console.log(createInDb[1]("new")); // from the outside(api) you can not add new element
+console.log(createInDb[0]("other one"));
+console.log(createInDb[1]()); // access to read
+console.log(createInDb[2](0, "new elem"));
+console.log(createInDb[2](10, 100));
+console.log(createInDb[2](6, "100"));
+console.log(createInDb[1]()); // access to read
