@@ -1,19 +1,18 @@
-let init = () => {
-  let db = [];
-  let create = dbToArray => {
+const init = () => {
+  const db = [];
+  const api = [];
+  const create = dbToArray => {
     db.push(dbToArray);
     return db.length;
   };
-  return create;
+  api.push(create);
+  return api;
 };
 
 const createInDb = init();
 
-createInDb();
-createInDb();
-createInDb();
-createInDb();
-createInDb();
-createInDb();
-createInDb();
-console.log(createInDb("horse"));
+createInDb[0]("dog");
+createInDb[0]("cat");
+createInDb[0]("horse");
+createInDb[0]("pajaro");
+console.log(createInDb[0]("horse"));
