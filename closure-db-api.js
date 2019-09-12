@@ -5,7 +5,12 @@ const init = () => {
     db.push(dbToArray);
     return db.length;
   };
+
+  const read = () => {
+    const dbCopy = [...db];
+  };
   api.push(create);
+  api.push(read);
   return api;
 };
 
