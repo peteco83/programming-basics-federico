@@ -1,6 +1,6 @@
 const init = () => {
   const db = [];
-  const api = [];
+
   const create = dbToArray => {
     db.push(dbToArray);
     return db.length;
@@ -8,9 +8,9 @@ const init = () => {
 
   const read = () => {
     const dbCopy = [...db];
+    return dbCopy;
   };
-  api.push(create);
-  api.push(read);
+  const api = [create, read];
   return api;
 };
 
@@ -21,3 +21,4 @@ createInDb[0]("cat");
 createInDb[0]("horse");
 createInDb[0]("pajaro");
 console.log(createInDb[0]("horse"));
+console.log(createInDb[1]());
