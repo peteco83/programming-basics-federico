@@ -19,7 +19,15 @@ const init = () => {
     }
   };
 
-  api.push(create, read, update);
+  const remove = delElement => {
+    if (db[delElement]) {
+      return db.splice(delElement, 1);
+    } else {
+      return `Error!!!!`;
+    }
+  };
+
+  api.push(create, read, update, remove);
   return api;
 };
 
@@ -44,4 +52,7 @@ console.log("\nAfter adding a new element");
 console.log(createInDb[2](9, "Peter"));
 console.log(createInDb[1]());
 console.log(createInDb[2](19, "Federico"));
+console.log(createInDb[1]());
+createInDb[3](3);
+console.log("\nAfter delete index 3");
 console.log(createInDb[1]());
