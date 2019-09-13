@@ -3,7 +3,7 @@ const init = () => {
   const api = [];
   const create = dbToArray => {
     db.push(dbToArray);
-    return db.length;
+    return `New element added! The new lenght of the array is ${db.length}`;
   };
 
   const read = () => {
@@ -15,7 +15,7 @@ const init = () => {
     if (db[index]) {
       return (db[index] = newElement);
     } else {
-      return "ERRRORRRR";
+      return create(newElement);
     }
   };
 
