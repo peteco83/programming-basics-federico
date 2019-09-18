@@ -53,3 +53,15 @@ const repeatIt = (item, times) => {
 };
 
 console.log(repeatIt("gorkeim", 5));
+
+let myThirdArray = [1, 2, 4, 8, 16, 32];
+let myThirdIndex = 0;
+let isfactor = true;
+
+do {
+  isfactor =
+    myThirdArray[myThirdIndex] % myThirdArray[myThirdIndex - 1] === 0
+      ? true
+      : false;
+  console.log(isfactor);
+} while (myThirdIndex < myThirdArray.length);
