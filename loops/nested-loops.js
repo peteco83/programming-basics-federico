@@ -41,3 +41,17 @@ for (let i = 0; i < 3; i += 1) {
   }
   console.log(dashPalo);
 }
+
+const exerciseEstrellas = () => {
+  let estrellas = "";
+
+  for (let i = 0; i < 4; i += 1) {
+    for (let j = 0; j < 1; j += 1) {
+      estrellas += "*";
+    }
+
+    console.log(estrellas);
+  }
+};
+
+exerciseEstrellas();
