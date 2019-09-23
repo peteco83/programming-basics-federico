@@ -20,3 +20,26 @@ console.log(`-${recipe.ingredients[2]}`);
 // -cinnamon
 //     - cumin
 //     - cocoa
+
+const recipe2 = new Object();
+recipe.title = "Pizza";
+recipe.ingredients = {
+  flour: 150,
+  water: 50,
+  mozzarella: 100
+};
+const makingPizza = howMany => {
+  if (howMany === 1) {
+    console.log(
+      `You need ${recipe.ingredients.flour} grs. of flour, ${recipe.ingredients.water}ml water and ${recipe.ingredients.mozzarella}grs. mozzarella to make ${howMany} pizza`
+    );
+  } else {
+    console.log(
+      `You need ${recipe.ingredients.flour * howMany}grs. of flour, ${recipe
+        .ingredients.water * howMany}ml water and ${recipe.ingredients
+        .mozzarella * howMany}grs. mozzarella, to make ${howMany} Pizzas`
+    );
+  }
+};
+
+makingPizza(5);

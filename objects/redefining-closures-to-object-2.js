@@ -39,8 +39,8 @@ newObject.api.push(
   return newObject.api;
 }
 
-let createInDb = newObject.api[0];
-let readDB = newObject.api[1];
+newObject.createInDb = newObject.api[0];
+newObject.readDB = newObject.api[1];
 let updateDb = newObject.api[2];
 let removeDb = newObject.api[3];
 
