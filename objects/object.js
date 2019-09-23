@@ -18,6 +18,8 @@ console.log(person.welcome());
 //rewrite object key value
 person.age = "40";
 console.log(person.age);
+//a different way to call it
+console.log(person["age"]);
 
 // second baby object
 let car = new Object();
@@ -31,3 +33,21 @@ car.add = (x, y) => {
 
 console.log(car.brand);
 console.log(car.add(2, 3));
+
+// other possibilities
+
+const person2 = {
+  name: {
+    first: "Ali",
+    last: "Doe",
+    randomname: () => {
+      return `I am ${person2.name.first}`;
+    }
+  },
+  age: 30
+};
+
+console.log(person2.name.first);
+console.log(person2.age);
+console.log(person2.name.last);
+console.log(person2.name.randomname());
