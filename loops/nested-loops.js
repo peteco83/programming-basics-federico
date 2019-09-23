@@ -56,14 +56,31 @@
 
 // exerciseEstrellas();
 
+<<<<<<< HEAD
 const triangulo = () => {
   let estrellita = "";
   for (let i = 0; i < 10; i += 1) {
     for (let j = i; j => 0; j -= 1) {
       triangulo.append(j + " ");
+=======
+// Challenge
+
+const christmasTree = rows => {
+  for (let i = 0; i <= rows; i += 1) {
+    let estrellas = "";
+    for (let j = 0; j <= rows - i; j += 1) {
+      estrellas += " ";
+    }
+    for (let k = 0; k < i; k += 1) {
+      estrellas += "*";
+>>>>>>> 5732ba24986bf2bd514e8292d9fedb752560c35a
     }
   }
   console.log(estrellita);
 };
 
+<<<<<<< HEAD
 triangulo();
+=======
+christmasTree(3);
+>>>>>>> 5732ba24986bf2bd514e8292d9fedb752560c35a
