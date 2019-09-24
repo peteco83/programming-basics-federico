@@ -66,3 +66,5 @@ object3.forLoop = () => {
   console.log(this.str);
 };
 object3.forLoop();
+
+// si se hace una copia o referencia de un objecto y luego se cambia se cambia el original y no la copia!!!!!!!!!!!!!!!1

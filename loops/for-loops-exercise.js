@@ -204,10 +204,10 @@ output5();
 console.log();
 
 // Exercise 10
-const exercise10 = () => {
-    let isPalindrome = ["Anna", ""]
-    for (let i = 1; i <  ) {
-        if ()
-    }
-}
-exercise10();
+// const exercise10 = () => {
+//     let isPalindrome = ["Anna", ""]
+//     for (let i = 1; i <  ) {
+//         if ()
+//     }
+// }
+// exercise10();
