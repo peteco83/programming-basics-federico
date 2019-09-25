@@ -54,17 +54,17 @@
 
 // Tests
 
-let object3 = new Object();
-object3.forLoop = () => {
-  this.minus = 9;
-  this.str = "";
+// let object3 = new Object();
+// object3.forLoop = () => {
+//   this.minus = 9;
+//   this.str = "";
 
-  for (let i = 1; i <= 10; i += 1) {
-    this.str += this.minus + " ";
-    this.minus -= 1;
-  }
-  console.log(this.str);
-};
-object3.forLoop();
+//   for (let i = 1; i <= 10; i += 1) {
+//     this.str += this.minus + " ";
+//     this.minus -= 1;
+//   }
+//   console.log(this.str);
+// };
+// object3.forLoop();
 
-// si se hace una copia o referencia de un objecto y luego se cambia se cambia el original y no la copia!!!!!!!!!!!!!!!1
+// // si se hace una copia o referencia de un objecto y luego se cambia se cambia el original y no la copia!!!!!!!!!!!!!!!1
