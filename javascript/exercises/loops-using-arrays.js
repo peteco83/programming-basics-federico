@@ -17,3 +17,14 @@ const myArray = () => {
 };
 
 console.log(myArray());
+
+// 2. ** Hello Frien ** Create an array filled with your friends' and family's names.Loop over the array and greet each friend e.g.Hello Maria! Hello Mike! etc. **
+// Bonus **: Print the indexes of each item in the array.Expected output example: Mike is at index 1 of my friends array.
+
+const helloFriends = () => {
+  let myArrayOfFriends = ["Patrick", "Peter", "Peteco", "Pato", "Pablo"];
+  for (let i = 0; i < myArrayOfFriends.length; i += 1) {
+    console.log(`Hello ${myArrayOfFriends[i]}`);
+  }
+};
+helloFriends();
