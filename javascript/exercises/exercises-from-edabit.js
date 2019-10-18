@@ -174,3 +174,33 @@ class Rectangle {
 let p = new Rectangle(4, 5);
 console.log(p.getArea());
 console.log(p.getPerimeter());
+
+// Write a function that returns true if a hash contains the specified key, and false otherwise.
+
+//   Examples
+// hasKey({ a: 44, b: 45, c: 46 }, "d") ➞ false
+
+// hasKey({ craves: true, midnight: true, snack: true }, "morning") ➞ false
+
+// hasKey({ pot: 1, tot: 2, not: 3 }, "not") ➞ true
+
+function hasKey(obj, key) {
+  for (let i in obj) {
+    if (i === key) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(hasKey({ a: 44, b: 45, c: 46 }, "c"));
+
+function addUp(num) {
+  let peteco = 0;
+  for (let i = 0; i <= num; i++) {
+    peteco += i;
+  }
+  return peteco;
+}
+
+console.log(addUp(13));
