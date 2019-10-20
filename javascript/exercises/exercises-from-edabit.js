@@ -175,6 +175,30 @@ let p = new Rectangle(4, 5);
 console.log(p.getArea());
 console.log(p.getPerimeter());
 
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+  getTitle() {
+    return "Title: " + this.title;
+  }
+  getAuthor() {
+    return "Author: " + this.author;
+  }
+}
+
+let PP = new Book("Pride and Prejudice", "Jane Austen");
+let H = new Book("Hamlet", "William Shakespeare");
+let WP = new Book("War and Peace", "Leo Tolstoy");
+
+console.log(PP.title);
+console.log(PP.author);
+console.log(PP.getTitle());
+console.log(PP.getAuthor());
+
+// Instantiate your Book constructor here
+
 // Write a function that returns true if a hash contains the specified key, and false otherwise.
 
 //   Examples
@@ -204,3 +228,68 @@ function addUp(num) {
 }
 
 console.log(addUp(13));
+
+// https://edabit.com/challenge/Wp8uSyh2tfpdzR4CP
+// Given a number and an object with min and max properties, return true if the number lies within the given range(inclusive).
+
+//   Examples
+// isInRange(4, { min: 0, max: 5 }) ➞ true
+
+// isInRange(4, { min: 4, max: 5 }) ➞ true
+
+// isInRange(4, { min: 6, max: 10 }) ➞ false
+
+// isInRange(5, { min: 5, max: 5 }) ➞ true
+// Notes
+// Numbers can be positive or negative, and they may not be integers.
+// You can assume min <= max is always true.
+// If you get stuck on a challenge, find help in the Resources tab.
+// If you're really stuck, unlock solutions in the Solutions tab.
+
+function isInRange(num, range) {
+  if (num >= range.min && num <= range.max) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isInRange(4, { min: 0, max: 5 }));
+
+const objectToArray2 = obj => {
+  let myArr = [];
+  for (let i in obj) {
+    myArr.push([i, obj[i]]);
+  }
+  return myArr;
+};
+
+console.log(
+  objectToArray2({
+    D: 1,
+    B: 2,
+    C: 3
+  })
+);
+
+console.log(
+  objectToArray2({
+    likes: 2,
+    dislikes: 3,
+    followers: 10
+  })
+);
+
+const keysAndValues2 = obj => {
+  let myArr = [];
+  let secondArr = [];
+  const keys = Object.keys(obj);
+  const values = Object.values(obj);
+  for (let i = 0; i < keys.length; i++) {
+    myArr.push(keys[i]);
+    secondArr.push(values[i]);
+  }
+  return [myArr, secondArr];
+};
+
+console.log(keysAndValues2({ a: 1, b: 2, c: 3 }));
