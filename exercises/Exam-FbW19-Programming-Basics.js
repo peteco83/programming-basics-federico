@@ -267,7 +267,7 @@ const eight = pin => {
     return false;
   } else if (sumOfTheNumbers < 5) {
     return false;
-  } else if ([...new Set(strToArray)] === true) {
+  } else if (new Set(strToArray) !== strToArray.length) {
     return false;
   } else {
     return true;
@@ -282,4 +282,4 @@ console.log("12344\t", eight("12344"));
 console.log("1235\t", eight("1235"));
 console.log("1110\t", eight("1110"));
 console.log("1c24\t", eight("1c24"));
-console.log("5555\t", eight("5555"));
+console.log("4444\t", eight("4444"));
